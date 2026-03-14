@@ -287,7 +287,7 @@ int main() {
     string line;
 
     cout << CYAN << BOLD << "====================================================" << endl;
-    cout << "           PRO-MATCH TRADING SYSTEM v7.0" << endl;
+    cout << "           NEXUSMATCH TRADING SYSTEM " << endl;
     cout << "   Commands: BUY/SELL [NAME] [QTY] [PRICE]" << endl;
     cout << "             STOP [NAME] [TRIGGER] [PRICE] [QTY]" << endl;
     cout << "             BOARD | EXIT" << endl;

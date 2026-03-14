@@ -69,14 +69,19 @@ The system features a professional-grade  Order Book Dashboard, providing an ins
 ---
 
 ##  Sample Test Scenario
+![alt text](image.png)
 
 To see the "Price-Time Priority" and "Stop-Loss" logic work in sync, try these inputs:
 
-1.  `BUY Alice 10 100` (Alice waits at $100)
-2.  `STOP Bob 100 95 10` (Bob sets a hidden "trap" triggered by a trade at $100)
-3.  `SELL Charlie 10 100` (Charlie triggers the trade)
+**1.Market Setup:** Seller s1 is at $91; Buyer b1 is at $90. A hidden Stop-Loss (c3) is set to trigger at $92.
 
-**The Result:** The engine matches Alice and Charlie instantly, sees the price hit $100, and immediately activates Bob's order to sell.
+**2.The Catalyst:** Buyer b7 enters at $91.
+
+**3.Execution:** The engine matches b7 and s1 at $91.
+
+**4.Chain Reaction:** The trade at $91 is below the $92 threshold. This instantly triggers c3's stop-loss, which enters the market and matches the remainder of b7's order at $89.
+
+**Result:** The system proves its ability to handle multi-level matching and real-time trigger injection within a single transaction cycle.
 
 
 ---
